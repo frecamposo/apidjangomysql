@@ -14,6 +14,8 @@ class Personas(models.Model):
     apellido = models.CharField(max_length=45)
     edad = models.IntegerField()
 
-    class Meta:
-        managed = False
-        db_table = 'personas'
+   # class Meta:
+   #     managed = False
+   #     db_table = 'personas'
+    def __str__(self):
+        return self.nombre
