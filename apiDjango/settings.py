@@ -37,6 +37,14 @@ CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will
 #]
 
 # Application definition
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -55,11 +63,11 @@ INSTALLED_APPS = [
 #    "http://localhost:8101"
 #]
 CORS_ORIGIN_WHITELIST=[
-    "http://localhost:8101"
+    "http://localhost"
 ]
-CORS_ALLOW_HEADERS = [
-    "http://localhost:8101/"
-]
+#CORS_ALLOW_HEADERS = [
+#    "http://localhost:8101/"
+#]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -109,10 +117,10 @@ DATABASES = {
         'PORT': '3306',
     }
     
-    #'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3',
-    #    'NAME': BASE_DIR / 'db.sqlite3',
-    #}
+   # 'default': {
+   #     'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': BASE_DIR / 'db.sqlite3',
+   # }
     
 }
 
