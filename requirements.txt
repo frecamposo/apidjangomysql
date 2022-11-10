@@ -22,7 +22,6 @@ certifi==2020.4.5.1
 cffi==1.14.0
 chardet==3.0.4
 colorama==0.4.3
-conda-package-handling==1.7.0
 cryptography==2.9.2
 defusedxml==0.7.0rc1
 dj-database-url==1.0.0
