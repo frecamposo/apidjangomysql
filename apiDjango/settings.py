@@ -30,14 +30,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
-#CORS_ALLOW_CREDENTIALS = True
-#CORS_ALLOWED_ORIGINS = [
+# If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOWED_ORIGINS = [
 #    'http://localhost:8101',
-#] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
-#CORS_ALLOWED_ORIGIN_REGEXES = [
+# ] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
+# CORS_ALLOWED_ORIGIN_REGEXES = [
 #    'http://localhost:8101',
-#]
+# ]
 
 # Application definition
 CORS_ALLOW_METHODS = [
@@ -59,18 +60,18 @@ INSTALLED_APPS = [
     'API',
     'rest_framework',
     'corsheaders',
-    
+
 ]
 
-#CORS_ALLOWED_ORIGINS = [
+# CORS_ALLOWED_ORIGINS = [
 #    "http://localhost:8101"
-#]
-CORS_ORIGIN_WHITELIST=[
+# ]
+CORS_ORIGIN_WHITELIST = [
     "http://localhost"
 ]
-#CORS_ALLOW_HEADERS = [
+# CORS_ALLOW_HEADERS = [
 #    "http://localhost:8101/"
-#]
+# ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -84,7 +85,7 @@ MIDDLEWARE = [
 
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    
+
 ]
 
 ROOT_URLCONF = 'apiDjango.urls'
@@ -112,22 +113,33 @@ WSGI_APPLICATION = 'apiDjango.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-      #  'default': {
-      #  'ENGINE': 'django.db.backends.mysql', 
-      #  'NAME': 'ejemploapi',
-      #  'USER': 'root',
-      #  'PASSWORD': '',
-      #  'HOST': 'localhost',
-      #  'PORT': '3306',
-    
-    
-   # }
- 'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'w4lk65a4cijyiuzi',
+        'USER': 'b53zza36ohai01u6',
+        'PASSWORD': 'tmmsqzgsdjgy4ars',
+        'HOST': 'o2olb7w3xv09alub.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
+
+
     }
-   
-    
+    #    'default': {
+    #    'ENGINE': 'django.db.backends.mysql',
+    #    'NAME': 'heroku_c9c9e2244dbe50f',
+    #    'USER': 'bfc5bdc09d7911',
+    #    'PASSWORD': '03baacb2',
+    #    'HOST': 'us-cdbr-east-06.cleardb.net',
+    #    'PORT': '3306',
+
+
+    #}
+# 'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+
+
 }
 
 
